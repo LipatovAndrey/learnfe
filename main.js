@@ -1,12 +1,10 @@
 'use strict';
-
 const sections = [
     ['login','Окно логина'],
     ['profile','Профиль'],
     ['about','Оо']
 ];
 const nav = document.getElementById('navigation');
-
 for (let section of Array.from(sections)) {
     const button = document.createElement('input');
     button.setAttribute('type', 'button');
