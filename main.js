@@ -39,7 +39,7 @@ monitorButton.addEventListener("click", function (event) {
         if (xhr.readyState ===4){
             console.log(xhr.responseText);
             const monitor = document.getElementById('monitor');
-            monitor.innerHTML = xhr.responseText;
+            monitor.textContent = xhr.responseText;
         }
     };
     xhr.send();
