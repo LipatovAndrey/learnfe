@@ -33,10 +33,10 @@ monitorButton.addEventListener("click", function (event) {
     const method = document.getElementsByName('method') [0];
     console.log(inputUrl.value + method.value);
     const xhr = new XMLHttpRequest();
+    xhr.open(method.value, inputUrl.value);
     xhr.withCredentials = true;
     xhr.setRequestHeader('Content-type:', 'text/html');
     xhr.setRequestHeader('Access-Control-Allow-Origin:', '*');
-    xhr.open(method.value, inputUrl.value);
     xhr.onreadystatechange = function () {
         if (xhr.readyState ===4){
             console.log(xhr.responseText);
